@@ -15,7 +15,7 @@ from pathlib import Path
 
 
 st.title('Prediga su probabilidad de morir en el Titanic')
-img = Image.open(str(Path.cwd())+'/titanic.jpg')
+img = Image.open(str(Path.cwd())+'/Titanic.jpg')
 st.image(img,width=600, channels='RGB',caption=None)
 
 df = pd.read_csv('titanic.csv')

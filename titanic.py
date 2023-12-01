@@ -10,10 +10,12 @@ import streamlit as st
 import streamlit.components.v1 as components
 from PIL import Image
 import pickle
+from pathlib import Path
+
 
 
 st.title('Prediga su probabilidad de morir en el Titanic')
-img = Image.open('titanic.jpg')
+img = Image.open(str(Path.cwd())+'/titanic.jpg')
 st.image(img,width=600, channels='RGB',caption=None)
 
 df = pd.read_csv('titanic.csv')

@@ -43,11 +43,7 @@ model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['acc']) 
 
-model.save('titanic.keras')
-history = model.fit(X_train, y_train, epochs=119, batch_size=1,validation_data=(X_val, y_val))
 
-with open('training_history','wb') as file:
-    pickle.dump(history.history, file)
 
 model = load_model('titanic.keras')
 history = pickle.load(open('training_history','rb'))

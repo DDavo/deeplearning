@@ -44,7 +44,7 @@ model.compile(optimizer='adam',
               metrics=['acc']) 
 
 model.save('titanic.h5')
-history = model.fit(X_train, y_train, epochs=119, batch_size=1,validation_data=(X_val, y_val))
+history = model.fit(X_train, y_train, epochs=1, batch_size=1,validation_data=(X_val, y_val))
 
 with open('training_history','wb') as file:
     pickle.dump(history.history, file)
